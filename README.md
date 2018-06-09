@@ -1,6 +1,6 @@
 # Predator
 
-A fast and functional PHP Webframework experiment
+A fast and functional PHP Webframework.
 
 ## Design Goals
 
@@ -14,4 +14,10 @@ That doesn't mean there won't be Objects, but Object Orientation is not a seriou
 4. Not a big-idea-framework. Predator is a small-idea framework, intended to build out small microservices that need to perform like the dickens. This is not a kitchen-sink framework. Predator is more a component library than a framework.
 5. Be open to contributions. We want programmers in the wild, shipping actual code, to be able to contribute with the least amount of fuss and hassle. We want to be welcoming to all, and useable by all, without exception.
 6. Referntial Transparency - Every component of Predator needs to be replaceable/configurable by end users. 
-7. Debug is a first class feature - many frameworks spend endless amounts of time advertising their silly features and useless generators without ever providing real world structured debugging tools. It's not just about when things go wrong, it's about when you get hired to a new project and have to take over someone elses crazy codebase and you have not idea what the hell it is even doing. The worst experience you'll have is when a project you have little to no experience with on a server you barely have access to, with a monolithic framework of abstractions blows up and everyone is running around with their hair on fire. 
+7. Debug is a first class feature - many frameworks spend endless amounts of time advertising their silly features and useless generators without ever providing real world structured debugging tools. It's not just about when things go wrong, it's about when you get hired to a new project and have to take over someone elses crazy codebase and you have no idea what the hell it is even doing. The worst experience you'll have is when a project you have little to no experience with on a server you barely have access to, with a monolithic framework of abstractions blows up and everyone is running around with their hair on fire. 
+
+## Why Predator
+
+Because things like Laravel and Symfony are massive, slow moving, abstraction heavy megafauna. Predator is the velociraptor hiding in the undergrowth. It shouldn't take you more than a day to get up to speed on a framework for a simple web application. Websites are not that complicated, microservices even less. Also, these monoliths are more complicated than they need to be to test and deploy. They violate the 12 Factor application six ways from sunday by implementing their own homebrewed .env (boggles the mind...boggles).
+
+Today (2018-06-09) at work I had to install a test deployment of a symfony application. Downloading all the dependencies literally took 10 minutes. 98% of the code in those dependencies is never called. It's insane. Somebody has to do something.
