@@ -18,6 +18,6 @@ That doesn't mean there won't be Objects, but Object Orientation is not a seriou
 
 ## Why Predator
 
-Because things like Laravel and Symfony are massive, slow moving, abstraction heavy megafauna. Predator is the velociraptor hiding in the undergrowth. It shouldn't take you more than a day to get up to speed on a framework for a simple web application. Websites are not that complicated, microservices even less. Also, these monoliths are more complicated than they need to be to test and deploy. They violate the 12 Factor application six ways from sunday by implementing their own homebrewed .env (boggles the mind...boggles).
+Because things like Laravel and Symfony are massive, slow moving, abstraction heavy megafauna. Predator is the Velociraptor hiding in the undergrowth. It shouldn't take you more than a day to get up to speed on a framework for a simple web application. Websites are not that complicated, microservices even less. Also, these monoliths are more complicated than they need to be to test and deploy. They violate the 12 Factor application six ways from sunday by implementing their own homebrewed .env (boggles the mind...boggles).
 
 Today (2018-06-09) at work I had to install a test deployment of a symfony application. Downloading all the dependencies literally took 10 minutes. 98% of the code in those dependencies is never called. It's insane. Somebody has to do something.
