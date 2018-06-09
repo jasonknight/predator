@@ -9,8 +9,4 @@ $app('show_routes');
 $app('show_config');
 $app('route','/');
 
-$app = $predator(['env'=>'production']);
-$app('add_route',['/hello_world' => function() {}]);
-$app('show_routes');
-$app('show_config');
 

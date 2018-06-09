@@ -1,26 +1,14 @@
 <?php
-return function ($config = []) {
-	return function ($cmd, ...$args) use ($config) {
-		static $routes = [];
-		if ( $cmd == 'add_route' ) {
-			foreach ( $args[0] as $k=>$v ) {
-				$routes[$k] = $v;
-			}
+return function ($config = [], $router = null) {
+	return function ($cmd, ...$args) use ($config,$router) {		
+		static $router;
+		if ( $router == null ) {
+			echo "Creating new router\n";
+			$router = include(__DIR__ . "/router.php" );
+			$router = $router($config);
 		}
-		if ( $cmd == 'route' ) {
-			foreach ( $routes as $route=>$cb ) {
-				echo "route=$route\n";
-				if ( preg_match( $route, $args[0],$matches ) ) {
-					echo "$route matched\n";
-					print_r($matches);
-					return $cb($matches);
-				}
-			}
-		}
-		if ( $cmd == 'show_routes' ) {
-			foreach ( $routes as $route ) {
-				print_r($route);
-			}
+		if ( preg_match("/(route|routes)$/", $cmd) ) {
+			return call_user_func_array($router,func_get_args());
 		}
 		if ( $cmd == 'show_config' ) {
 			print_r($config);
