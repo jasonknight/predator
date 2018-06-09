@@ -2,8 +2,8 @@
 return function ($config = [], $router = null) {
 	return function ($cmd, ...$args) use ($config,$router) {		
 		static $router;
+		static $config;
 		if ( $router == null ) {
-			echo "Creating new router\n";
 			$router = include(__DIR__ . "/router.php" );
 			$router = $router($config);
 		}

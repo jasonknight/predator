@@ -1,6 +1,7 @@
 <?php
 return function ($config = []) {
 	return function ($cmd, ...$args) use ($config) {
+		static $config;
 		static $routes = [];
 		if ( $cmd == 'add_route' ) {
 			echo "Adding route\n";
