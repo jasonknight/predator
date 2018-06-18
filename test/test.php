@@ -15,7 +15,7 @@ function run() {
 }
 
 function test_logger() {
-	$l = logger();
+	$l = logger(function ($str) { echo "CUSTOM" . $str . "\n";});
 	echo $l('info', 'hello', 'world');
 	echo $l('error',['goodbye' => 'world']);
 }
