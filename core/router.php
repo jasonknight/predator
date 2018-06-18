@@ -1,6 +1,7 @@
 <?php
 return function () {
-	return function ($config, $routes, $cmd, ...$args) {
+	return function ($config, $cmd, ...$args) {
+		static $routes = [];
 		if ( $cmd == 'add_route' ) {
 			foreach ( $args[0] as $k=>$v ) {
 				$routes[$k] = $v;

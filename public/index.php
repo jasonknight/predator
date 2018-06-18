@@ -23,11 +23,12 @@ $app('add_route',[
 		},
 	]
 ]);
-$app('print_routes');
+$app('print_routes',function ($name,$cb) {
+	echo "$name\n";
+});
 $app('print_config');
 $callbacks = $app('route','/hello/world/5576');
 print_r($callbacks);
-
 
 echo pipe(function() { return "Hello"; }, function($s) { return strtoupper($s); });
 echo pipe('xxx');
